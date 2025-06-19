@@ -9,9 +9,11 @@ Project Description
 
 ### In Progress
 
-- [ ] freeze😛  
-- [ ] get data api😛  
+- [ ] laravel data  
+- [ ] dio clineside  
+- [ ] freeze with bloc  
 
 ### Done ✓
 
+- [x] freeze model  
 
