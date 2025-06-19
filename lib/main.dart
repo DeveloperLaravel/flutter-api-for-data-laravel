@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_laravel/perstions/home/home_page.dart';
+import 'package:flutter_api_laravel/home_page.dart';
 import 'package:flutter_api_laravel/theme/cubits/theme_cubit.dart';
 import 'package:flutter_api_laravel/theme/repositories/theme_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
