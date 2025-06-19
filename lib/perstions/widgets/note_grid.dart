@@ -7,7 +7,7 @@ class NoteGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverGrid(
       delegate: SliverChildBuilderDelegate((context, index) {
-        return const NoteGridItem();
+        return NoteGridItem();
       }, childCount: 10),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
@@ -19,15 +19,17 @@ class NoteGrid extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class NoteGridItem extends StatelessWidget {
-  const NoteGridItem({super.key});
+  NoteGridItem({super.key});
+  bool isDarkTheme = false;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
       child: Card(
-        color: Colors.red,
+        color: isDarkTheme ? Colors.red : Colors.teal,
         elevation: 3.0,
         child: Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0)),

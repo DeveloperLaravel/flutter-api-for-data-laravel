@@ -41,18 +41,7 @@ class _MyAppState extends State<MyApp> {
             theme: ThemeData.light(useMaterial3: true),
             darkTheme: ThemeData.dark(useMaterial3: true),
             themeMode: state.themeMode,
-            home: Scaffold(
-              appBar: AppBar(
-                actions: [
-                  Switch(
-                    value: state.themeMode == ThemeMode.dark,
-                    onChanged: (_) async =>
-                        context.read<ThemeCubit>().switchTheme(),
-                  ),
-                ],
-              ),
-              body: HomePage(),
-            ),
+            home: Scaffold(body: HomePage()),
           ),
         ),
       ),

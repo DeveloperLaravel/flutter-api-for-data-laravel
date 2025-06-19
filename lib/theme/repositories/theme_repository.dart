@@ -3,6 +3,8 @@ import 'package:flutter/scheduler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeRepository {
+
+  
   Future<bool> getTheme() async =>
       (await SharedPreferences.getInstance()).getBool('isDarkTheme') ??
       SchedulerBinding.instance.platformDispatcher.platformBrightness ==
