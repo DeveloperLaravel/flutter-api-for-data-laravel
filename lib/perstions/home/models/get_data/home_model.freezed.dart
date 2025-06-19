@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$HomeModel {
 
- String get title; String get content;@JsonKey(name: 'created_at') String get createdAt;
+ String get todo; bool get completed; int get userId;
 /// Create a copy of HomeModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -29,16 +29,16 @@ $HomeModelCopyWith<HomeModel> get copyWith => _$HomeModelCopyWithImpl<HomeModel>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeModel&&(identical(other.title, title) || other.title == title)&&(identical(other.content, content) || other.content == content)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeModel&&(identical(other.todo, todo) || other.todo == todo)&&(identical(other.completed, completed) || other.completed == completed)&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,title,content,createdAt);
+int get hashCode => Object.hash(runtimeType,todo,completed,userId);
 
 @override
 String toString() {
-  return 'HomeModel(title: $title, content: $content, createdAt: $createdAt)';
+  return 'HomeModel(todo: $todo, completed: $completed, userId: $userId)';
 }
 
 
@@ -49,7 +49,7 @@ abstract mixin class $HomeModelCopyWith<$Res>  {
   factory $HomeModelCopyWith(HomeModel value, $Res Function(HomeModel) _then) = _$HomeModelCopyWithImpl;
 @useResult
 $Res call({
- String title, String content,@JsonKey(name: 'created_at') String createdAt
+ String todo, bool completed, int userId
 });
 
 
@@ -66,12 +66,12 @@ class _$HomeModelCopyWithImpl<$Res>
 
 /// Create a copy of HomeModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? title = null,Object? content = null,Object? createdAt = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? todo = null,Object? completed = null,Object? userId = null,}) {
   return _then(_self.copyWith(
-title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as String,
+todo: null == todo ? _self.todo : todo // ignore: cast_nullable_to_non_nullable
+as String,completed: null == completed ? _self.completed : completed // ignore: cast_nullable_to_non_nullable
+as bool,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as int,
   ));
 }
 
@@ -82,12 +82,12 @@ as String,
 @JsonSerializable()
 
 class _HomeModel implements HomeModel {
-  const _HomeModel({required this.title, required this.content, @JsonKey(name: 'created_at') required this.createdAt});
+  const _HomeModel({required this.todo, required this.completed, required this.userId});
   factory _HomeModel.fromJson(Map<String, dynamic> json) => _$HomeModelFromJson(json);
 
-@override final  String title;
-@override final  String content;
-@override@JsonKey(name: 'created_at') final  String createdAt;
+@override final  String todo;
+@override final  bool completed;
+@override final  int userId;
 
 /// Create a copy of HomeModel
 /// with the given fields replaced by the non-null parameter values.
@@ -102,16 +102,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HomeModel&&(identical(other.title, title) || other.title == title)&&(identical(other.content, content) || other.content == content)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HomeModel&&(identical(other.todo, todo) || other.todo == todo)&&(identical(other.completed, completed) || other.completed == completed)&&(identical(other.userId, userId) || other.userId == userId));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,title,content,createdAt);
+int get hashCode => Object.hash(runtimeType,todo,completed,userId);
 
 @override
 String toString() {
-  return 'HomeModel(title: $title, content: $content, createdAt: $createdAt)';
+  return 'HomeModel(todo: $todo, completed: $completed, userId: $userId)';
 }
 
 
@@ -122,7 +122,7 @@ abstract mixin class _$HomeModelCopyWith<$Res> implements $HomeModelCopyWith<$Re
   factory _$HomeModelCopyWith(_HomeModel value, $Res Function(_HomeModel) _then) = __$HomeModelCopyWithImpl;
 @override @useResult
 $Res call({
- String title, String content,@JsonKey(name: 'created_at') String createdAt
+ String todo, bool completed, int userId
 });
 
 
@@ -139,12 +139,12 @@ class __$HomeModelCopyWithImpl<$Res>
 
 /// Create a copy of HomeModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? title = null,Object? content = null,Object? createdAt = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? todo = null,Object? completed = null,Object? userId = null,}) {
   return _then(_HomeModel(
-title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as String,
+todo: null == todo ? _self.todo : todo // ignore: cast_nullable_to_non_nullable
+as String,completed: null == completed ? _self.completed : completed // ignore: cast_nullable_to_non_nullable
+as bool,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as int,
   ));
 }
 

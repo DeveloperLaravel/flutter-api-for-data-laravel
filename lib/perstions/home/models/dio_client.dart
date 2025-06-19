@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_api_laravel/perstions/models/auth_interceptor.dart';
+import 'package:flutter_api_laravel/perstions/home/models/auth_interceptor.dart';
 
 class DioClient {
   static const String _baseUrl = "http://127.0.0.1:8000/api/";

@@ -9,13 +9,14 @@ part 'home_model.g.dart';
 @freezed
 abstract class HomeModel with _$HomeModel {
   const factory HomeModel({
-    required String title,
-    required String content,
-    @JsonKey(name: 'created_at') required String createdAt,
+    required String todo,
+    required bool completed,
+    required int userId,
+    // @JsonKey(name: 'created_at') required String createdAt,
   }) = _HomeModel;
 
   factory HomeModel.fromJson(Map<String, Object?> json) =>
       _$HomeModelFromJson(json);
 }
 
-// flutter packages pub run build_runner build --delete-conflicting-outputs 
+// flutter packages pub run build_runner build --delete-conflicting-outputs

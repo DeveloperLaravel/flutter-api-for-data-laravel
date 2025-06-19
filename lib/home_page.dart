@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_laravel/perstions/bloc/home_bloc.dart';
-import 'package:flutter_api_laravel/perstions/models/get_data/home_model.dart';
+import 'package:flutter_api_laravel/perstions/home/models/get_data/home_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,8 +9,8 @@ class HomePage extends StatelessWidget {
   Widget _buildMovies(List<HomeModel> movies) => ListView.builder(
     itemCount: movies.length,
     itemBuilder: (context, index) => ListTile(
-      title: Text(movies[index].title),
-      subtitle: Text(movies[index].content),
+      title: Text(movies[index].todo),
+      subtitle: Text(movies[index].todo),
     ),
   );
 

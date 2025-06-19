@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_api_laravel/perstions/models/dio_client.dart';
-import 'package:flutter_api_laravel/perstions/models/get_data/home_model.dart';
+import 'package:flutter_api_laravel/perstions/home/models/dio_client.dart';
+import 'package:flutter_api_laravel/perstions/home/models/get_data/home_model.dart';
 
 part 'home_event.dart';
 part 'home_state.dart';
