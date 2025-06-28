@@ -1,11 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_laravel/home_page.dart';
-import 'package:flutter_api_laravel/theme/cubits/theme_cubit.dart';
-import 'package:flutter_api_laravel/theme/repositories/theme_repository.dart';
+import 'package:flutter_api_laravel/about.dart';
+import 'package:flutter_api_laravel/cubits/theme_cubit.dart';
+import 'package:flutter_api_laravel/repositories/theme_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  runApp(MyApp(themeRepository: ThemeRepository()));
+  runApp(
+    HomeScreen(),
+    //themeRepository: ThemeRepository()
+  );
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(),
+      home: const About(),
+    );
+  }
 }
 
 class MyApp extends StatefulWidget {
@@ -41,7 +57,7 @@ class _MyAppState extends State<MyApp> {
             theme: ThemeData.light(useMaterial3: true),
             darkTheme: ThemeData.dark(useMaterial3: true),
             themeMode: state.themeMode,
-            home: Scaffold(body: HomePage()),
+            home: Scaffold(body: About()),
           ),
         ),
       ),

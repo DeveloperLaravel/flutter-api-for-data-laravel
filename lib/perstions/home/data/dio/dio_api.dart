@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_api_laravel/perstions/home/data/api/api.dart';
 import 'package:flutter_api_laravel/perstions/home/data/api/api_respones.dart';
 import 'package:flutter_api_laravel/perstions/home/data/dio/string_data.dart';
+import 'package:flutter_api_laravel/perstions/home/models/get_data/home_model.dart';
 
 class DioApi implements Api {
   Dio dio = Dio(BaseOptions(baseUrl: StringData.baseUrl));
@@ -18,17 +19,17 @@ class DioApi implements Api {
   }
 
   @override
-  Future<ApiRespones> get(String endPoint) async {
+  Future<List<HomeModel>> get() async {
     ApiRespones apiRespones = ApiRespones();
     try {
-      Response response = await dio.get(endPoint);
-      apiRespones.statusCode = response.statusCode;
-      apiRespones.body = response.data;
+      final response = await dio.get('/todos');
+      return response.data;
     } on DioException catch (e) {
       apiRespones.isError = true;
+      print('Error occurred: ${e.message}');
     }
 
-    return apiRespones;
+    return [];
   }
 
   @override

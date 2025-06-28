@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_api_laravel/theme/repositories/theme_repository.dart';
+import 'package:flutter_api_laravel/repositories/theme_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'theme_state.dart';

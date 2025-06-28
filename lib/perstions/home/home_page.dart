@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_api_laravel/perstions/home/widgets/app_icon_button.dart';
 import 'package:flutter_api_laravel/perstions/home/widgets/note_app_bar.dart';
 import 'package:flutter_api_laravel/perstions/home/widgets/note_grid.dart';
-import 'package:flutter_api_laravel/theme/cubits/theme_cubit.dart';
+import 'package:flutter_api_laravel/cubits/theme_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatelessWidget {
